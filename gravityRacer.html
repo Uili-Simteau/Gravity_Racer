@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gravity_Racer</title>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron:700,400' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="style/gravity.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body onload="startGame()">
+    <div class="container">
+        <div class="header">
+            <div class="header"><h1>Gravity Racer</h1></div>
+        </div>
+        <canvas id="myCanvas" width="800" height="300"  style="border: 1px solid #999;"></canvas>
+        <br>
+        <br>
+        <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">THRUSTERS</button>
+        <br>
+        <p>Use the THRUSTERS button to navigate past objects</p>
+        <p>How long can you stay alive?</p>
+        <script src="gravity.js"></script>
+        <audio autoplay="autoplay" controls="controls">
+           <source src="spaceMusic80s.mp3"/>
+       </audio>
+       <br>
+       <a href="https://twitter.com/share" class="twitter-share-button" data-size="large">Tweet</a>
+       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+       </script>
+   </div>
+
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>javascript-racer-game</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="racer.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+</head>
+<body>
+    <div class="container">
+        <div class = "heading"><h1>JS Space Racer</h1></div>
+        <table class="racer_table">
+        <tr id="lane1">
+          <td>Space Fleet 1</td>
+         <td class="active"></td>
+        </tr>
+        <tr id="lane2">
+          <td>Space Fleet 2</td>
+          <td class="active"></td>
+        </tr>
+       </table>
+        <div class = "instructions">
+        <h2>How to Play:</h2>
+       <p>Get to <strong>planet X</strong> first with the fastest fingers in the galaxy!</p>
+        <p>Space Fleet 1 uses the <strong>'a'</strong> key to fly.<br>
+        Space Fleet 2 uses the <strong>'enter'</strong> key to fly.</p>
+        </div>
+        <button class="hidden" id="restart" type="restart">LAUNCH AGAIN?</button>
+
+        <div>
+            <p class="hidden" id="won">Glactic control has been achieved!</p>
+        </div>
+        <div>
+            <p class="hidden" id="racer2_wins">Glactic control is stolen by Racer 2!</p>
+        </div>
+    </div>
+ /*   <audio id="blast1">
+        <source src="blast1.mp3" type="audio/mp3">
+    </audio>
+    <audio id="blast1">
+        <source src="blast1.mp3" type="audio/mp3">
+    </audio>*/
+<script src="racer.js"></script>
+
+</body>
+</html> -->

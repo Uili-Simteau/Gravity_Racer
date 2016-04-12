@@ -1,9 +1,12 @@
 //run program after everything has loaded.
-document.addEventListener('DOMContentLoaded', function(startGame) {
+document.addEventListener('DOMContentLoaded', function() {
 
     var myGamePiece;
     var myObstacles = [];
     var myScore = 0;
+
+var test = prompt("are you there?");
+test;
 
     function startGame() {
         myGamePiece = new component(30, 30, "blue", 10, 120);
@@ -11,12 +14,13 @@ document.addEventListener('DOMContentLoaded', function(startGame) {
         myScore = new component("30px", "Orbitron", "white", 280, 40, "text");
         myGameArea.start();
     }
-/**/
+
     var myGameArea = {
         canvas : document.getElementById("myCanvas"),
         start : function() {
-            this.myCanvas.width = 800;
-            this.myCanvas.height = 300;
+            this.myCanvas.width = 00;
+            this.myCanvas.height = 500;
+            this.myCanvas.style= background-color: "white";
             this.context = this.myCanvas.getContext("2d");
             document.body.insertBefore(this.myCanvas, document.body.childNodes[0]);
             this.frameNo = 0;
