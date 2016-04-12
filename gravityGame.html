@@ -9,12 +9,39 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
 </head>
 <body>
-    <div class="container">
+        <div onload="startGame()" class="container">
+<!--         <script type="text/javascript">
+
+        function startGame() {
+            myGamePiece = new component(30, 30, "blue", 10, 120);
+            myGamePiece.gravity = 0.05;
+            myScore = new component("30px", "Orbitron", "black", 280, 40, "text");
+            myGameArea.start();
+        }
+            var myGameArea = {
+        canvas : document.createElement("canvas"),
+        start : function() {
+            this.canvas.width = 480;
+            this.canvas.height = 270;
+            this.context = this.canvas.getContext("2d");
+            document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+            this.frameNo = 0;
+            this.interval = setInterval(updateGameArea, 20);
+        },
+        clear : function() {
+            this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        }
+    }
+    </script> -->
+
         <div class="header">
             <div class="header"><h1>Gravity Racer</h1></div>
         </div>
-
-         <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">THRUSTERS</button>
+        <canvas id="myCanvas" width="800" height="300" style="background-color: transparent; border: 1px solid #999;"></canvas>
+        <br>
+        <br>
+        <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">THRUSTERS</button>
+        <br>
         <p>Use the THRUSTERS button to navigate past objects</p>
         <p>How long can you stay alive?</p>
         <script src="gravity.js"></script>

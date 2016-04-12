@@ -1,29 +1,29 @@
 //run program after everything has loaded.
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function(startGame) {
 
     var myGamePiece;
     var myObstacles = [];
     var myScore = 0;
 
     function startGame() {
-        myGamePiece = new component(30, 30, "black", 10, 120);
+        myGamePiece = new component(30, 30, "blue", 10, 120);
         myGamePiece.gravity = 0.05;
-        myScore = new component("30px", "Orbitron", "black", 280, 40, "text");
+        myScore = new component("30px", "Orbitron", "white", 280, 40, "text");
         myGameArea.start();
     }
-
+/**/
     var myGameArea = {
-        canvas : document.createElement("canvas"),
+        canvas : document.getElementById("myCanvas"),
         start : function() {
-            this.canvas.width = 480;
-            this.canvas.height = 270;
-            this.context = this.canvas.getContext("2d");
-            document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+            this.myCanvas.width = 800;
+            this.myCanvas.height = 300;
+            this.context = this.myCanvas.getContext("2d");
+            document.body.insertBefore(this.myCanvas, document.body.childNodes[0]);
             this.frameNo = 0;
             this.interval = setInterval(updateGameArea, 20);
         },
         clear : function() {
-            this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            this.context.clearRect(0, 0, this.myCanvas.width, this.myCanvas.height);
         }
     }
 
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
             this.hitBottom();
         }
         this.hitBottom = function() {
-            var rockbottom = myGameArea.canvas.height - this.height;
+            var rockbottom = myGameArea.myCanvas.height - this.height;
             if (this.y > rockbottom) {
                 this.y = rockbottom;
                 this.gravitySpeed = 0;
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
         myGameArea.clear();
         myGameArea.frameNo += 1;
         if (myGameArea.frameNo == 1 || everyinterval(150)) {
-            x = myGameArea.canvas.width;
+            x = myGameArea.myCanvas.width;
             minHeight = 20;
             maxHeight = 200;
             height = Math.floor(Math.random()*(maxHeight-minHeight+1)+minHeight);
@@ -117,7 +117,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function accelerate(n) {
         myGamePiece.gravity = n;
     }
-}
+    }
+
 
 
 
