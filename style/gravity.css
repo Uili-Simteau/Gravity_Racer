@@ -8,7 +8,7 @@ body {
 text-align: center;
 margin: auto;
 color: white;
-background-image: url(space_background.png);
+background-image: url(../images/space_background.png);
 background-size: cover;
 background-image: no-repeat;
 }
@@ -63,7 +63,7 @@ table {
 }
 
 #lane1 td.active {
-    background-image: url(fighterspr1.png);
+    background-image: url(../images/fighterspr1.png);
     background-image: no-repeat;
     background-size: 45px;
 }
